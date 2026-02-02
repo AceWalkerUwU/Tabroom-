@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "Tabroom+",
+  "version": "0.1.0",
+  "description": "Minimal visual upgrade and tools for Tabroom Parliamentary debate pages.",
+  "permissions": ["storage"],
+  "host_permissions": ["https://www.tabroom.com/*"],
+  "content_scripts": [
+    {
+      "matches": ["https://www.tabroom.com/*"],
+      "js": ["content.js"],
+      "css": ["styles.css"],
+      "run_at": "document_idle"
+    }
+  ],
+  "web_accessible_resources": [
+  {
+    "resources": ["tabroomplus-logo.png"],
+    "matches": ["https://www.tabroom.com/*"]
+  }
+]
+}

@@ -1,0 +1,327 @@
+/* ===== STARRED TOURNAMENTS BOX (black + yellow) ===== */
+
+.tabroom-plus-starred-box {
+  margin: 15px 0 20px 0;
+  padding: 0;
+  background: #111;                    /* black background */
+  border-radius: 10px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.35);
+  overflow: hidden;
+}
+
+/* Top bar */
+.tabroom-plus-starred-header {
+  background: #111;
+  padding: 12px 16px;
+  border-bottom: 1px solid #f6c029;    /* yellow border line */
+}
+
+.tabroom-plus-starred-title {
+  font-weight: 700;
+  font-size: 15px;
+  color: #f6c029;                      /* yellow title */
+  margin: 0;
+}
+
+/* List container */
+.tabroom-plus-starred-list {
+  padding: 10px;
+  margin: 0;
+}
+
+/* Each starred tournament */
+.tabroom-plus-starred-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #ffffff;
+  margin: 6px 4px;
+  padding: 10px 14px;
+  border-radius: 8px;
+  transition: all 0.18s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.16);
+  border-left: 4px solid #f6c029;      /* yellow accent bar */
+}
+
+.tabroom-plus-starred-item:hover {
+  transform: translateX(3px);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.22);
+}
+
+/* Link text for tournament name */
+.tabroom-plus-starred-link {
+  flex: 1;
+  text-decoration: none;
+  color: #1a202c;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.tabroom-plus-starred-link:hover {
+  color: #f6b100;
+}
+
+/* Unstar (X) button */
+.tabroom-plus-unstar-btn {
+  background: #fff7f7;
+  border: 1px solid #fed7d7;
+  color: #e53e3e;
+  width: 26px;
+  height: 26px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.18s ease;
+  margin-left: 10px;
+  padding: 0;
+  line-height: 1;
+}
+
+.tabroom-plus-unstar-btn:hover {
+  background: #fed7d7;
+  border-color: #feb2b2;
+  transform: scale(1.05);
+}
+
+.tabroom-plus-unstar-btn:active {
+  transform: scale(0.97);
+}
+
+/* ----- Power badge on entry record page ----- */
+
+.tabroom-plus-power-badge {
+  margin: 8px 0 12px 0;
+  padding: 6px 12px;
+  display: inline-block;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  box-shadow: 0 2px 6px rgba(102, 126, 234, 0.3);
+}
+
+/* ----- Pairings toolbar & buttons ----- */
+
+.tabroom-plus-pairings-toolbar {
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+/* Big, easy-to-click pill button */
+.tabroom-plus-pairings-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 10px 24px;          /* more padding = wider button */
+  min-width: 230px;            /* guarantees enough width for the text */
+  border-radius: 999px;
+  border: none;
+
+  background: #f6c029;         /* yellow */
+  color: #111827;              /* near-black text */
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 14px;
+
+  white-space: nowrap;         /* keep text on one line */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+  transition: transform 0.12s ease, box-shadow 0.12s ease, background 0.12s ease;
+}
+
+.tabroom-plus-pairings-button:hover:not(:disabled) {
+  background: #f5b400;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.tabroom-plus-pairings-button:active:not(:disabled) {
+  transform: translateY(0);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+}
+
+.tabroom-plus-pairings-button:disabled {
+  opacity: 0.7;
+  cursor: default;
+}
+
+/* little label under team name for “Unranked” */
+.tabroom-plus-rank-label {
+  margin-top: 2px;
+  font-size: 11px;
+  color: #4a5568;
+}
+
+
+/* ----- Strength badges inside pairing cells ----- */
+
+.tabroom-plus-strength-badge {
+  display: inline-block;
+  margin-left: 4px;
+  padding: 1px 4px;
+  border-radius: 3px;
+  font-size: 11px;
+  background-color: #f1f1f1;
+  color: #555;
+}
+
+/* Predicted winner/loser highlights */
+
+.tabroom-plus-strong {
+  background-color: #e5ffe5 !important; /* light green */
+  border-left: 3px solid #48bb78 !important;
+}
+
+.tabroom-plus-weak {
+  background-color: #ffe5e5 !important; /* light red */
+  border-left: 3px solid #f56565 !important;
+}
+
+/* Toss-up / even matchup (within 2 points) */
+.tabroom-plus-even {
+  background-color: #fff9c4 !important; /* light yellow */
+  border-left: 3px solid #d69e2e !important;
+}
+
+.tabroom-plus-strong .tabroom-plus-strength-badge {
+  background-color: #9ae6b4;
+  color: #22543d;
+  font-weight: 600;
+}
+
+.tabroom-plus-weak .tabroom-plus-strength-badge {
+  background-color: #fc8181;
+  color: #742a2a;
+  font-weight: 600;
+}
+
+/* Unranked label under team name */
+.tabroom-plus-rank-label {
+  font-size: 11px;
+  color: #718096;
+  margin-top: 2px;
+}
+
+/* Header bar tweaks */
+/* .tabroom-plus-header { */
+  /* keep Tabroom's background but we can slightly darken it if you want */
+/* } */
+
+/* Wrapper around the logo link */
+.tabroom-plus-logo-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+/* Actual Tabroom+ logo image */
+.tabroom-plus-logo-img {
+  height: 150px;        /* adjust if you want it bigger/smaller */
+  display: block;
+}
+
+/* ===== JUDGE NOTES UI ===== */
+
+/* ===== Judge Notes Popup ===== */
+.tabroom-plus-judge-notes-popup {
+  position: absolute;
+  z-index: 9999;
+  width: 340px;              /* wider box */
+  max-width: 90vw;
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 14px 16px 14px 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+  font-family: inherit;
+  font-size: 14px;
+  color: #1a202c;
+}
+
+/* Title */
+.tabroom-plus-judge-notes-title {
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+/* Textarea */
+.tabroom-plus-judge-notes-textarea {
+  width: 100%;
+  box-sizing: border-box;
+  min-height: 110px;         /* taller area */
+  resize: vertical;
+  border-radius: 8px;
+  border: 1px solid #cbd5e0;
+  padding: 8px 10px;
+  font-size: 13px;
+  line-height: 1.4;
+  outline: none;
+}
+
+.tabroom-plus-judge-notes-textarea:focus {
+  border-color: #f6b700;
+  box-shadow: 0 0 0 2px rgba(246, 183, 0, 0.25);
+}
+
+/* Button row */
+.tabroom-plus-judge-notes-actions {
+  margin-top: 10px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;                  /* space between Save / Close */
+}
+
+/* Base button style */
+.tabroom-plus-judge-notes-actions button {
+  min-width: 70px;
+  padding: 6px 12px;         /* bigger click target */
+  border-radius: 999px;
+  border: none;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s ease, transform 0.05s ease;
+}
+
+/* Save (yellow) */
+.tabroom-plus-judge-notes-save {
+  background: #f6b700;
+  color: #1a202c;
+}
+
+.tabroom-plus-judge-notes-save:hover {
+  background: #f7c948;
+  transform: translateY(-1px);
+}
+
+/* Close (subtle grey) */
+.tabroom-plus-judge-notes-close {
+  background: #e2e8f0;
+  color: #2d3748;
+}
+
+.tabroom-plus-judge-notes-close:hover {
+  background: #cbd5e0;
+  transform: translateY(-1px);
+}
+
+/* Small pencil badge on judge name when notes exist */
+.tabroom-plus-judge-notes-btn {
+  margin-left: 6px;
+  padding: 2px 6px;
+  font-size: 11px;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  background: #edf2f7;
+  cursor: pointer;
+}
+
+.tabroom-plus-judge-notes-btn-has-note {
+  background: #f6b700;
+  border-color: #f6b700;
+  color: #1a202c;
+}
