@@ -2,6 +2,9 @@
 
 **Last updated:** February 1, 2026
 
+**DISCLAIMER**
+The parli predicting pairings feature is NOT 100% accurate, please contact if there are grave issues (i.e. its saying you're going to lose even when it's clearly not the case as it will mix up or mess up names making it sometimes innacurate)
+
 Tabroom+ is a Google Chrome extension that enhances the Tabroom website with tools to help debate participants track tournaments, save preparation notes, and view informational enhancements.
 
 1) Data Collection
